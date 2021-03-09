@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hz_guideline_25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vt_guideline_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vt_guideline_85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <TextView
+        android:id="@+id/txt_greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_welcome_to_firefly"
+        android:textSize="@dimen/sp_sixteen"
+        app:layout_constraintLeft_toLeftOf="@id/vt_guideline_15"
+        app:layout_constraintRight_toRightOf="@id/vt_guideline_85"
+        app:layout_constraintTop_toBottomOf="@id/hz_guideline_25"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/vt_guideline_15"
+        app:layout_constraintRight_toRightOf="@id/vt_guideline_85"
+        app:layout_constraintTop_toBottomOf="@id/txt_greeting"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:maxLines="1"
+        android:maxLength="12"
+        android:hint="@string/txt_username" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/vt_guideline_15"
+        app:layout_constraintRight_toRightOf="@id/vt_guideline_85"
+        app:layout_constraintTop_toBottomOf="@id/et_username"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:maxLength="12"
+        android:hint="@string/txt_password" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/vt_guideline_15"
+        app:layout_constraintRight_toRightOf="@id/vt_guideline_85"
+        app:layout_constraintTop_toBottomOf="@id/et_password"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:text="@string/txt_login"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
