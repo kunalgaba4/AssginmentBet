@@ -23,7 +23,7 @@ val NetworkModule = module{
 
     single<BaseService> {
         BaseServiceImp(
-            get()
+            get() //comment
         )
     }
 }
