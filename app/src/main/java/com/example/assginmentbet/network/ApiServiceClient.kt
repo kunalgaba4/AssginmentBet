@@ -11,6 +11,7 @@ open class ApiServiceClient() {
     constructor(retrofitBuilder: Retrofit.Builder) : this() {
         userApi = retrofitBuilder.build()
             .create(UserApi::class.java)
+        //Added a comment
     }
 
     fun getUSerLoginInfo(username: String, password: String): Single<User> {

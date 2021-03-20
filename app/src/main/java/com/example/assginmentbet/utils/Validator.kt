@@ -40,13 +40,6 @@ class Validator {
     fun isValidName(data: Any, updateUI: Boolean = true): Boolean {
         val str = getText(data)
         val valid = str.trim().length > 2
-
-        // Set error if required
-        if (updateUI) {
-            val error: String? = if (valid) null else NAME_VALIDATION_MSG
-            setError(data, error)
-        }
-
         return valid
     }
 
@@ -86,28 +79,7 @@ class Validator {
             valid = false
         }
 
-        // Set error if required
-        if (updateUI) {
-            val error: String? = if (valid) null else PASSWORD_POLICY
-            setError(data, error)
-        }
-
         return valid
-    }
-
-    /**
-     * Sets error on EditText or TextInputLayout of the EditText.
-     * @param data - Should be EditText
-     * @param error - Message to be shown as error, can be null if no error is to be set
-     */
-    private fun setError(data: Any, error: String?) {
-        if (data is EditText) {
-            if (data.parent.parent is TextInputLayout) {
-                (data.parent.parent as TextInputLayout).setError(error)
-            } else {
-                data.setError(error)
-            }
-        }
     }
 
 }
